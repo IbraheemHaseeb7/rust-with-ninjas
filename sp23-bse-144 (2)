@@ -1,0 +1,36 @@
+1- different print modifiers
+
+fn main() {
+
+let a = 29;
+
+eprintln!("{}" , a); //prints output on the standard error bar
+println!("{}" , a); // prints output on the console
+}
+
+2- placeholders in RUST
+fn main() {
+
+             println!("{name}, {age}, {department}" , department= "SOFTWARE ENGINEERING", age= 18, name= "manal");
+             println!("{age}, {name}, {department}" , department= "SOFTWARE ENGINEERING", age= 18, name= "manal");
+
+             //but you cant write {name=}, thw equal sign is not used here because, the use is 'by reference' in this context
+             //the order of the placeholers determine the output
+}
+
+3- formatting variables with placedholers and custom width settings
+
+fn main() {
+        let number = 10;
+         println!("{number:>5}", number);
+         // will print -----10;
+         
+          println!("{number:<5}", number=number);
+          //will print 10----- cuz its left aligned
+
+          println!("{number:^5}", number=number);
+        //will print --10-- cuz this is center aligned
+}
+
+
+
